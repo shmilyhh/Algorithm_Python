@@ -20,7 +20,7 @@ def knightGraph(bdSize):
     return ktGraph
     
 def posToId(row, column, bdSize):
-    return row * bdSize + column
+    return (row * bdSize) + column
     
 def getLegalPositions(row, column, bdSize):
     newPositions = []
@@ -28,7 +28,7 @@ def getLegalPositions(row, column, bdSize):
     
     for m in moveOffsets:
         newX = row + m[0]
-        newY = row + m[1]
+        newY = column + m[1]
         if legalCoord(newX, bdSize) and legalCoord(newY, bdSize):
             newPositions.append((newX, newY))
     
@@ -39,6 +39,7 @@ def legalCoord(x, bdsize):
         return True
     else:
         return False
-        
-for i in knightGraph(5):
+"""
+for i in knightGraph(8):
     print i
+"""
