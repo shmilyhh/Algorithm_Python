@@ -126,6 +126,7 @@ class TreeNode():
         self.leftChild = left
         self.rightChild = right
         self.parent = parent
+        self.balanceFactor = 0
 
     def hasLeftChild(self):
         return self.leftChild
@@ -201,7 +202,8 @@ class TreeNode():
                 else:
                     self.parent.rightChild = self.rightChild
                 self.rightChild.parent = self.parent
-                
+
+"""                
 mytree = BinarySearchTree()
 mytree[3] = 'red'
 mytree[5] = 'blue'
@@ -215,3 +217,4 @@ print 6 in mytree
 print 2 in mytree
 mytree.delete(3)
 print mytree.root.key
+"""
