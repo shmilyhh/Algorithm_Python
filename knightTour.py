@@ -16,7 +16,7 @@ from knightMove import *
 def knightTour(n, path, u, limit):
     u.setColor('gray')
     path.append(u)
-    if len(path) < limit:
+    if n < limit:
         #adjacentVertices = u.getConnections()
         adjacentVertices = orderByAvail(u)
         i = 0
@@ -49,8 +49,20 @@ def orderByAvail(n):
 
     
 g = knightGraph(8)
+
+vl = []
+j = 0
 for i in g:
-    a = i
-    break
+    vl.append(i)
+
+print vl[4]
+    
+a = vl[4]
+    
 path = []
-knightTour(0, path, a, 63)
+knightTour(1, path, a, 64)
+
+pathid = []
+for i in path:
+    pathid.append(i.getId())
+print pathid
