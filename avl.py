@@ -82,6 +82,8 @@ avl = AvlTree()
 avl[1] = 100
 avl[2] = 200
 avl[3] = 300
+avl[4] = 400
+avl[5] = 500
 
 print avl[1].balanceFactor
 print avl[2].balanceFactor
