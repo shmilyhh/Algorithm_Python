@@ -24,3 +24,5 @@ def traverse(v):
         print vertex.getId()
         vertex = vertex.getPred()
     print vertex.getId()
+    
+    
